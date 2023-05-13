@@ -33,9 +33,9 @@ mongoose.connect(MONGO_URI).then((connected) => console.log("DB connected"))
 
 mongoose.connection.on("error", (error: Error) => console.log(error));
 
+app.use("/", router())
+
 app.get("/*", (req, res) => {
-  res.send("Welcome to Bater");
+  res.send("Welcome to Bater-API v1.0");
 });
 
-
-app.use("/", router())

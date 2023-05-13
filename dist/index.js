@@ -27,4 +27,7 @@ mongoose_1.default.Promise = Promise;
 mongoose_1.default.connect(keys_1.MONGO_URI).then((connected) => console.log("DB connected"));
 mongoose_1.default.connection.on("error", (error) => console.log(error));
 app.use("/", (0, router_1.default)());
+app.get("/*", (req, res) => {
+    res.send("Welcome to Bater");
+});
 //# sourceMappingURL=index.js.map
