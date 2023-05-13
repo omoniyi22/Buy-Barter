@@ -2,13 +2,13 @@
 
 # dependencies
 /node_modules
+/dist
 /.pnp
 .pnp.js
 
 # testing
 /coverage
 .env
-/dist
 
 
 # production
