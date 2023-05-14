@@ -1,6 +1,9 @@
+
 import express from "express";
 
-import { get, merge } from 'lodash';
+let lodash: any = require("lodash")
+
+let { get, merge } = lodash
 
 import { getUserBySessionToken } from "./../db/users";
 
@@ -12,7 +15,7 @@ export const isOwner = async (req: express.Request, res: express.Response, next:
     if (!currentUserId) {
       console.log("stopped1")
       return res.sendStatus(403)
-      
+
     }
 
     if (currentUserId.toString() != id) {
