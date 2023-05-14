@@ -38,5 +38,5 @@ mongoose.connection.on("error", (error: Error) => console.log(error));
 app.use("/", router())
 
 app.get("/*", (req, res) => {
-  res.send("Welcome to Bater-API v1.0");
+  res.send("Welcome to Buy-Barter API v1.0");
 });
