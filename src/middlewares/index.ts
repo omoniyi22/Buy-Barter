@@ -1,11 +1,11 @@
 
 import express from "express";
 
-let lodash: any = require("lodash")
-
-let { get, merge } = lodash
+import _ from 'lodash'
 
 import { getUserBySessionToken } from "./../db/users";
+
+let { get, merge } = _
 
 export const isOwner = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
   try {
