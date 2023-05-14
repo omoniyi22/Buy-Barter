@@ -38,6 +38,3 @@ app.use("/", router())
 app.get("/*", (req, res) => {
   res.send("Welcome to Bater-API v1.0");
 });
-
-
-export default app
