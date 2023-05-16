@@ -40,3 +40,5 @@ app.use("/", router())
 app.get("/*", (req, res) => {
   res.send("Welcome to Buy-Barter API v1.0");
 });
+
+export default app;
