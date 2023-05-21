@@ -3,7 +3,9 @@ import express from "express";
 
 import _ from 'lodash'
 
-import { getUserBySessionToken } from "./../db/users";
+
+
+import { getUserBySessionToken } from "./../services/user";
 
 let { get, merge } = _
 
