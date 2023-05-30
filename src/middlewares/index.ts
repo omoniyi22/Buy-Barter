@@ -1,11 +1,10 @@
-
 import express from "express";
 
 import _ from 'lodash'
 
 
 
-import { getUserBySessionToken } from "./../services/user";
+import { getUserBySessionToken } from "../services/profile/user";
 
 let { get, merge } = _
 
@@ -17,7 +16,6 @@ export const isOwner = async (req: express.Request, res: express.Response, next:
     if (!currentUserId) {
       console.log("stopped1")
       return res.sendStatus(403)
-
     }
 
     if (currentUserId.toString() != id) {

@@ -1,7 +1,7 @@
 import express from "express";
 import { getAllUsers, deleteUser, updateUser } from "./../controllers/users";
 import { isAuthenticated, isOwner } from '../middlewares';
-import { deleteUserById } from "../services/user";
+import { deleteUserById } from "../services/profile/user";
 
 const router = express.Router();
 

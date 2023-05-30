@@ -23,4 +23,4 @@ const Status = {
   SERVICE_UNAVAILABLE: 503,
 };
 
-module.exports = Status;
+export default Status;

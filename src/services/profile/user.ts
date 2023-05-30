@@ -1,7 +1,6 @@
-import { UserModel } from "./../models/profile";
+import { UserModel } from "../../models/profile";
 
 // USER ACCESS
-
 export const getUserById = (id: string) => UserModel.findById(id)
 export const getUserByEmail = (email: string) => UserModel.findOne({ email })
 export const getUserBySessionToken = (sessionToken: string) => UserModel.findOne({

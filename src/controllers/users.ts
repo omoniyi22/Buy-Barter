@@ -1,7 +1,5 @@
 import express from 'express';
-
-
-import { deleteUserById, getUserById, getUsers } from './../services/user';
+import { deleteUserById, getUserById, getUsers } from '../services/profile/user';
 
 export const getAllUsers = async (req: express.Request, res: express.Response) => {
   try {
@@ -30,15 +28,15 @@ export const deleteUser = async (req: express.Request, res: express.Response) =>
 export const updateUser = async (req: express.Request, res: express.Response) => {
   try {
     const { id } = req.params
-    const { username } = req.body;
+    const { firstName } = req.body;
 
-    if (!username) {
+    if (!firstName) {
       return res.sendStatus(400)
     }
 
     const user = await getUserById(id)
 
-    user.username = username;
+    user.firstName = firstName;
     await user.save();
 
     return res.status(200).json(user).end();

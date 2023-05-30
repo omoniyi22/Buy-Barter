@@ -9,7 +9,7 @@ import router from "./router";
 const app = express();
 
 import {
-  PORT,
+  APP_PORT,
   MONGO_URI,
 } from "./config/keys"
 
@@ -23,10 +23,10 @@ app.use(bodyparser.json());
 
 const server = http.createServer(app)
 
-let port = process.env.PORT || PORT
+let port = process.env.PORT || APP_PORT
 
 server.listen(port, () => {
-  console.log(`Server running on PORT ${PORT}`)
+  console.log(`Server running on PORT ${APP_PORT}`)
 })
 
 

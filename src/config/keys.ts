@@ -1,14 +1,10 @@
 import { config } from "dotenv"
 config()
-
-let {
+const ENV: any = process.env
+export const {
   MONGO_URI,
   APP_SECRET,
-  PORT
-} = process.env
-
-export {
-  MONGO_URI,
-  APP_SECRET,
-  PORT
-}
+  APP_PORT,
+  HOURS_SESSION_LIFESPAN,
+  APP_DOMAIN
+} = ENV

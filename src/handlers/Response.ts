@@ -1,3 +1,5 @@
+import { Response } from "express";
+
 class Responses {
   constructor() {
     this.SuccessResponse = this.SuccessResponse.bind(this);
@@ -13,10 +15,10 @@ class Responses {
     return res.status(code).json(_data);
   }
 
-  async ErrorResponse(res, code, message, error) {
+  async ErrorResponse(res: Response, code: number, message: string, error?: string) {
     const _error = {
       message,
-      error,
+      error: message ? message : error,
     };
 
     return res.status(code).json(_error);
@@ -24,4 +26,4 @@ class Responses {
 }
 
 
-module.exports = Responses;
+export default Responses;
